@@ -1,0 +1,41 @@
+
+package u3e3;
+public class PilaDinamica {
+     NodosPilas cima;
+    int tamanio;
+    
+    public boolean estaVacia(){
+        return cima==null;
+    }
+    //
+    public void Empujar(String elemento){
+        NodosPilas nodo=new NodosPilas(elemento);
+        nodo.siguiente=cima;
+        cima=nodo;
+        tamanio++;
+    }
+    //
+    public String SacarPila(){
+        String auxiliar="";
+        if (cima!=null) {
+           /*String */auxiliar=cima.elemento;
+        cima=cima.siguiente;
+        tamanio--;
+        return auxiliar; 
+        }else{
+            System.out.println("La Pila Esta Vacia");
+            return auxiliar;           
+        } 
+    }
+    //
+    public void MostrarPila(){
+        if (cima==null) {
+            System.out.println("La Pila esta Vacia");
+        }
+        NodosPilas recorre=cima;
+        while(recorre!=null){
+            System.out.println(recorre.elemento);
+            recorre=recorre.siguiente;
+        }
+    }
+}
