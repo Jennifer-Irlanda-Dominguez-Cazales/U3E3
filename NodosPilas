@@ -1,0 +1,12 @@
+
+package u3e3;
+
+public class NodosPilas {
+    String elemento;
+     NodosPilas siguiente; 
+  
+    public NodosPilas(String elemento){
+        this.elemento= elemento;
+        siguiente = null;
+    }
+}
